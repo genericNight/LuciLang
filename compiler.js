@@ -63,6 +63,13 @@ arr.forEach((line, idx)=> {
         newLn = line.replace("if?statement?held", "if")
         arr[idx] = newLn
     }
+    
+      if (line.includes("this.system.class =>")) {
+      let newLn;
+
+      newLn = line.replace("this.system.class =>", "class");
+      arr[idx] = newLn;
+  }
 
 });
 
